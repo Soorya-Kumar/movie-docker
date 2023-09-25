@@ -1,0 +1,10 @@
+Inception
+2010
+16 Jul 2010
+148 min
+Christopher Nolan
+Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page
+$292,587,330
+{"actor":"Leonardo DiCaprio"},{"actor":" Joseph Gordon-Levitt"},{"actor":" Elliot Page"}
+{"director":"Christopher Nolan"}
+{"genre":"Action"},{"genre":" Adventure"},{"genre":" Sci-Fi"}

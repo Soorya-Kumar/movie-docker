@@ -1,0 +1,14 @@
+OPEN THE TERMINAL
+
+MAKE THE FILE EXECUTABLE
+```
+chmod +x /movie/backup.sh
+```
+
+TO EXECUTE THE CRONJOB
+
+crontab -e
+ 00 20 * * * /movie/backup.sh
+ 
+SAVE AND EXIT 
+
