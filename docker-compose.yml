@@ -2,39 +2,41 @@ version: '3'
 
 services:
   mongodb1:
-    image: mongo:latest
+    build:
+      dockerfile: Dockerfile
     ports:
       - "27017:27017"
     volumes:
-      - mongo-data:/data/db
-    network:
-      - mondodb_network   
-      
+      - mongo-data1:/data/db
+    networks:
+      - mongodb_network
 
   mongodb2:
-    image: mongo:latest
+    build:
+      dockerfile: Dockerfile
     ports:
       - "27018:27017"
     volumes:
-      - mongo-data:/data/db
-    network:
-      - mondodb_network
+      - mongo-data2:/data/db
+    networks:
+      - mongodb_network
 
   image:
     build:
-      	context: ./images
-      	dockerfile: Dockerfile
+      context: ./images
+      dockerfile: Dockerfile
     volumes:
       - mongo-data:/data/db
     depends_on:
-      - mongo1
-      - mongo2
-    network:
-      - image_network 
+      - mongodb1
+      - mongodb2
+    networks:
+      - image_network
 
 volumes:
-  mongo-data:
+  mongo-data1:
+  mongo-data2:
 
 networks:
-  mondodb_network:
+  mongodb_network:
   image_network:
