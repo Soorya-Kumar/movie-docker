@@ -7,4 +7,4 @@ COPY poster.sh .
 
 RUN chmod +x poster.sh
 
-CMD[" "]
+CMD["poster.sh"]
